@@ -4,6 +4,12 @@
 <xsd:import namespace="http://ws.aerolinea.ecutravel.espe.edu.ec/" schemaLocation="http://localhost:8080/AerolineaAviancaWS/aerolineaAviancaws?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="traerBoletosPorPersona">
+<part name="parameters" element="tns:traerBoletosPorPersona"/>
+</message>
+<message name="traerBoletosPorPersonaResponse">
+<part name="parameters" element="tns:traerBoletosPorPersonaResponse"/>
+</message>
 <message name="retrieveVuelosByPara">
 <part name="parameters" element="tns:retrieveVuelosByPara"/>
 </message>
@@ -16,13 +22,11 @@
 <message name="registrarBoletoResponse">
 <part name="parameters" element="tns:registrarBoletoResponse"/>
 </message>
-<message name="traerBoletosPorPersona">
-<part name="parameters" element="tns:traerBoletosPorPersona"/>
-</message>
-<message name="traerBoletosPorPersonaResponse">
-<part name="parameters" element="tns:traerBoletosPorPersonaResponse"/>
-</message>
 <portType name="aerolineaws">
+<operation name="traerBoletosPorPersona">
+<input wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/traerBoletosPorPersonaRequest" message="tns:traerBoletosPorPersona"/>
+<output wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/traerBoletosPorPersonaResponse" message="tns:traerBoletosPorPersonaResponse"/>
+</operation>
 <operation name="retrieveVuelosByPara">
 <input wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/retrieveVuelosByParaRequest" message="tns:retrieveVuelosByPara"/>
 <output wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/retrieveVuelosByParaResponse" message="tns:retrieveVuelosByParaResponse"/>
@@ -31,13 +35,18 @@
 <input wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/registrarBoletoRequest" message="tns:registrarBoleto"/>
 <output wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/registrarBoletoResponse" message="tns:registrarBoletoResponse"/>
 </operation>
-<operation name="traerBoletosPorPersona">
-<input wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/traerBoletosPorPersonaRequest" message="tns:traerBoletosPorPersona"/>
-<output wsam:Action="http://ws.aerolinea.ecutravel.espe.edu.ec/aerolineaws/traerBoletosPorPersonaResponse" message="tns:traerBoletosPorPersonaResponse"/>
-</operation>
 </portType>
 <binding name="aerolineawsPortBinding" type="tns:aerolineaws">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="traerBoletosPorPersona">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="retrieveVuelosByPara">
 <soap:operation soapAction=""/>
 <input>
@@ -48,15 +57,6 @@
 </output>
 </operation>
 <operation name="registrarBoleto">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="traerBoletosPorPersona">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
