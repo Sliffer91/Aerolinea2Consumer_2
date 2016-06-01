@@ -18,8 +18,8 @@
     </target>
     <target name="wsimport-client-aerolineaAviancaws" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws"/>
-        <property name="wsdl-aerolineaAviancaws" location="xml-resources/web-service-references/aerolineaAviancaws/wsdl/10.49.241.3_8080/AerolineaAviancaWS/aerolineaAviancaws.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws" destdir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws" wsdl="${wsdl-aerolineaAviancaws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://10.49.241.3:8080/AerolineaAviancaWS/aerolineaAviancaws?wsdl" xnocompile="true" xendorsed="true" package="aerolinea2consumer">
+        <property name="wsdl-aerolineaAviancaws" location="xml-resources/web-service-references/aerolineaAviancaws/wsdl/localhost_8080/AerolineaAviancaWS/aerolineaAviancaws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws" destdir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws" wsdl="${wsdl-aerolineaAviancaws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AerolineaAviancaWS/aerolineaAviancaws?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-aerolineaAviancaws}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws"/>
         </wsimport>
@@ -31,7 +31,7 @@
     </target>
     <target name="wsimport-client-clean-aerolineaAviancaws" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/aerolineaAviancaws"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/aerolinea2consumer"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ec/edu/espe/ecutravel/aerolinea/ws"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-aerolineaAviancaws"/>
 </project>

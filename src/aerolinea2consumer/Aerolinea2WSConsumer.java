@@ -11,16 +11,22 @@ package aerolinea2consumer;
  */
 public class Aerolinea2WSConsumer {
 
-    public static Boolean registrarBoleto(java.lang.String persona, java.lang.String paquete, java.lang.String numPersonas, java.lang.Integer idVuelo) {
-        aerolinea2consumer.AerolineaAviancaws service = new aerolinea2consumer.AerolineaAviancaws();
-        aerolinea2consumer.Aerolineaws port = service.getAerolineawsPort();
+    private static Boolean registrarBoleto(java.lang.String persona, java.lang.String paquete, java.lang.String numPersonas, java.lang.Integer idVuelo) {
+        ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws service = new ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws();
+        ec.edu.espe.ecutravel.aerolinea.ws.Aerolineaws port = service.getAerolineawsPort();
         return port.registrarBoleto(persona, paquete, numPersonas, idVuelo);
     }
 
-    public static java.util.List<aerolinea2consumer.Vuelo> retrieveVuelosByPara(java.lang.String inicio, java.lang.String fin, java.lang.String origen, java.lang.String destino, java.lang.String numPer) {
-        aerolinea2consumer.AerolineaAviancaws service = new aerolinea2consumer.AerolineaAviancaws();
-        aerolinea2consumer.Aerolineaws port = service.getAerolineawsPort();
+    private static java.util.List<ec.edu.espe.ecutravel.aerolinea.ws.Vuelo> retrieveVuelosByPara(java.lang.String inicio, java.lang.String fin, java.lang.String origen, java.lang.String destino, java.lang.String numPer) {
+        ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws service = new ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws();
+        ec.edu.espe.ecutravel.aerolinea.ws.Aerolineaws port = service.getAerolineawsPort();
         return port.retrieveVuelosByPara(inicio, fin, origen, destino, numPer);
     }
-    
+
+    private static java.util.List<ec.edu.espe.ecutravel.aerolinea.ws.Boleto> traerBoletosPorPersona(java.lang.String persona) {
+        ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws service = new ec.edu.espe.ecutravel.aerolinea.ws.AerolineaAviancaws();
+        ec.edu.espe.ecutravel.aerolinea.ws.Aerolineaws port = service.getAerolineawsPort();
+        return port.traerBoletosPorPersona(persona);
+    }
+
 }

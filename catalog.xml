@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://10.49.241.3:8080/AerolineaAviancaWS/aerolineaAviancaws?wsdl" uri="xml-resources/web-service-references/aerolineaAviancaws/wsdl/10.49.241.3_8080/AerolineaAviancaWS/aerolineaAviancaws.wsdl"/>
     <system systemId="http://10.49.241.3:8080/AerolineaAviancaWS/aerolineaAviancaws?xsd=1" uri="xml-resources/web-service-references/aerolineaAviancaws/wsdl/10.49.241.3_8080/AerolineaAviancaWS/aerolineaAviancaws.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/AerolineaTameWS/aerolineaTamews?wsdl" uri="xml-resources/web-service-references/aerolineaTamews/wsdl/localhost_8080/AerolineaTameWS/aerolineaTamews.wsdl"/>
+    <system systemId="http://localhost:8080/AerolineaTameWS/aerolineaTamews?xsd=1" uri="xml-resources/web-service-references/aerolineaTamews/wsdl/localhost_8080/AerolineaTameWS/aerolineaTamews.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/AerolineaAviancaWS/aerolineaAviancaws?wsdl" uri="xml-resources/web-service-references/aerolineaAviancaws/wsdl/localhost_8080/AerolineaAviancaWS/aerolineaAviancaws.wsdl"/>
+    <system systemId="http://localhost:8080/AerolineaAviancaWS/aerolineaAviancaws?xsd=1" uri="xml-resources/web-service-references/aerolineaAviancaws/wsdl/localhost_8080/AerolineaAviancaWS/aerolineaAviancaws.xsd_1.xsd"/>
 </catalog>
